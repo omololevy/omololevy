@@ -68,3 +68,11 @@ Here are some ideas to get you started:
 </a>
 
 #### Languages
+
+<a href="https://github.com/omololevy/omololevy">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omololevy&hide=java,html,tex&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" />
+</a>
+
+#### Graph
+<!-- https://github.com/omololevy/github-readme-activity-graph -->
+<a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="Bryan's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
