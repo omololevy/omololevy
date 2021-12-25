@@ -62,3 +62,9 @@ Here are some ideas to get you started:
 ![](https://img.shields.io/badge/coolors-0078D6.svg?&style=for-the-badge&logo=coolors&logoColor=white)
 
 ## 📊 GITHUB STATS
+#### Score
+<a href="https://github.com/omololevy/omololevy">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=omololevy&show_icons=true&line_height=27&count_private=true&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" alt="Bryan's GitHub Stats" />
+</a>
+
+#### Languages
