@@ -31,6 +31,9 @@ Here are some ideas to get you started:
 </h3>
 
 ## 👨‍💻 PROGRAMMING LANGUAGES
-![](https://img.shields.io/badge/javascript-3776AB?style=for-the-badge&logo=javascript&logoColor=white) ![](https://img.shields.io/badge/python-276DC3?style=for-the-badge&logo=python&logoColor=white)
+![](https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white) ![](https://img.shields.io/badge/typescript-777BB4?style=for-the-badge&logo=typescript&logoColor=white) ![](https://img.shields.io/badge/python-276DC3?style=for-the-badge&logo=python&logoColor=white)
 
 ##  🧰 FRAMEWORKS
+![](https://img.shields.io/badge/JQUERY-430098?style=for-the-badge&logo=JQUERY&logoColor=white) ![](https://img.shields.io/badge/angular-777BB4?style=for-the-badge&logo=angular&logoColor=white)  ![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![](https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white) ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+## ⚡ DATABASES
