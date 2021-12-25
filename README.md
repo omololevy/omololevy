@@ -57,3 +57,8 @@ Here are some ideas to get you started:
 ![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)![](https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white) ![](https://img.shields.io/badge/anaconda-green.svg?&style=for-the-badge&logo=anaconda&logoColor=white) ![](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white) 
 
 ## DEVELOPMENT TOOLS
+![](https://img.shields.io/badge/trello-00000F.svg?&style=for-the-badge&logo=trello&logoColor=white)
+![](https://img.shields.io/badge/figma-316192.svg?&style=for-the-badge&logo=figma&logoColor=white)
+![](https://img.shields.io/badge/coolors-0078D6.svg?&style=for-the-badge&logo=coolors&logoColor=white)
+
+## 📊 GITHUB STATS
