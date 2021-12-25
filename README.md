@@ -31,10 +31,11 @@ Here are some ideas to get you started:
 </h3>
 
 ## 👨‍💻 PROGRAMMING LANGUAGES
+![](https://img.shields.io/badge/html-orange?style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/css-430098?style=for-the-badge&logo=css3&logoColor=white)
 ![](https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white) ![](https://img.shields.io/badge/typescript-777BB4?style=for-the-badge&logo=typescript&logoColor=white) ![](https://img.shields.io/badge/python-276DC3?style=for-the-badge&logo=python&logoColor=white)
 
-##  🧰 FRAMEWORKS
-![](https://img.shields.io/badge/JQUERY-430098?style=for-the-badge&logo=JQUERY&logoColor=white) ![](https://img.shields.io/badge/angular-777BB4?style=for-the-badge&logo=angular&logoColor=white)  ![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![](https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white) ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+##  🧰 FRAMEWORKS and LIBRARIES
+![](https://img.shields.io/badge/Bootstrap-430098?style=for-the-badge&logo=bootstrap&logoColor=white) ![](https://img.shields.io/badge/JQUERY-430098?style=for-the-badge&logo=JQUERY&logoColor=white) ![](https://img.shields.io/badge/angular-777BB4?style=for-the-badge&logo=angular&logoColor=white)  ![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![](https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white) ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 ## ⚡ DATABASES
 ![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![](https://img.shields.io/badge/SQLITE-4EA94B?style=for-the-badge&logo=sqlite&logoColor=white) 
@@ -48,7 +49,7 @@ Here are some ideas to get you started:
 ## 🎓📚 EDUCATION 
 ![](https://img.shields.io/badge/maseno_universty-87CF3E?style=for-the-badge&logo=maseno&logoColor=white)
 
-![](https://img.shields.io/badge/moringaschool-87CF3E?style=for-the-badge&logo=moringaschool&logoColor=white)
+![](https://img.shields.io/badge/moringa_school-87CF3E?style=for-the-badge&logo=moringas_chool&logoColor=white)
  <!-- ![](https://img.shields.io/badge/Coursera-0056D2?style=for-the-badge&logo=Coursera&logoColor=white) ![](https://img.shields.io/badge/Udacity-grey?style=for-the-badge&logo=udacity&logoColor=#5FCFEE) ![](https://img.shields.io/badge/free%20code%20camp-27273D?style=for-the-badge&logo=freecodecamp&logoColor=white) ![](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white)  -->
  
  ![](https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white) 
