@@ -40,3 +40,6 @@ Here are some ideas to get you started:
 ![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![](https://img.shields.io/badge/SQLITE-4EA94B?style=for-the-badge&logo=sqlite&logoColor=white) 
 
 ## ☁ CLOUD TECHNOLOGIES
+![](https://img.shields.io/badge/github_pages-232F3E?style=for-the-badge&logo=github&logoColor=white) ![](	https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) 
+
+## 💻 OPERATING SYSTEMS
