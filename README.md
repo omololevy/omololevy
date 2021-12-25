@@ -29,3 +29,8 @@ Here are some ideas to get you started:
 <h3 align="center">
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">Hello! I'm Levy Cotech. Welcome to my profile.
 </h3>
+
+## 👨‍💻 PROGRAMMING LANGUAGES
+![](https://img.shields.io/badge/javascript-3776AB?style=for-the-badge&logo=javascript&logoColor=white) ![](https://img.shields.io/badge/python-276DC3?style=for-the-badge&logo=python&logoColor=white)
+
+##  🧰 FRAMEWORKS
