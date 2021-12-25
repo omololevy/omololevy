@@ -37,3 +37,6 @@ Here are some ideas to get you started:
 ![](https://img.shields.io/badge/JQUERY-430098?style=for-the-badge&logo=JQUERY&logoColor=white) ![](https://img.shields.io/badge/angular-777BB4?style=for-the-badge&logo=angular&logoColor=white)  ![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![](https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white) ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 ## ⚡ DATABASES
+![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![](https://img.shields.io/badge/SQLITE-4EA94B?style=for-the-badge&logo=sqlite&logoColor=white) 
+
+## ☁ CLOUD TECHNOLOGIES
