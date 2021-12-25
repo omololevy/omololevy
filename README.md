@@ -43,3 +43,6 @@ Here are some ideas to get you started:
 ![](https://img.shields.io/badge/github_pages-232F3E?style=for-the-badge&logo=github&logoColor=white) ![](	https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) 
 
 ## 💻 OPERATING SYSTEMS
+![](https://img.shields.io/badge/ubuntu-87CF3E?style=for-the-badge&logo=ubuntu&logoColor=white) ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+
+## 🎓📚 EDUCATION 
