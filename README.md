@@ -16,8 +16,13 @@ Here are some ideas to get you started:
 -->
 ![Banner](https://github.com/omololevy/omololevy/blob/master/Profile.png?raw=true)
 
+<!-- GREETING  -->
+<h3 align="center">
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">Hello! I'm Levy Cotech. Welcome to my profile.
+</h3> <br><br>
+
 <!-- BADGES -->
-<p align="center">
+<p align="left">
 <img src="https://img.shields.io/badge/Interest-Artificial Intelligence-blue"/>
 <img src="https://img.shields.io/badge/Hobby-Coding-blue" />
 <img src="https://img.shields.io/badge/Programming-Python%2C%20JavaScript-blue" />
@@ -25,10 +30,7 @@ Here are some ideas to get you started:
 <img src="https://img.shields.io/badge/Language-English%2C%20Swahili-blue" />
 </p>
 
-<!-- GREETING  -->
-<h3 align="center">
-  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">Hello! I'm Levy Cotech. Welcome to my profile.
-</h3>
+
 
 ## 👨‍💻 PROGRAMMING LANGUAGES
 ![](https://img.shields.io/badge/html-orange?style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/css-430098?style=for-the-badge&logo=css3&logoColor=white)
