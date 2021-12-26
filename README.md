@@ -65,15 +65,20 @@ Here are some ideas to get you started:
 ## 📊 GITHUB STATS
 #### Score
 <a href="https://github.com/omololevy/omololevy">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=omololevy&show_icons=true&line_height=27&count_private=true&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" alt="Bryan's GitHub Stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=omololevy&show_icons=true&line_height=27&count_private=true&title_color=f48c06&text_color=c9cacc&icon_color=2bbc8a&bg_color=000000" alt="Bryan's GitHub Stats" />
 </a>
 
 #### Languages
 
-<a href="https://github.com/omololevy/omololevy">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omololevy&hide=java,html,tex&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" />
+
+  <a href="https://github.com/omololevy/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omololevy&theme=highcontrast" />
 </a>
 
+#### Consistency
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=omololevy&theme=highcontrast&layout=compa")](https://git.io/streak-stats)
+
 #### Graph
-<!-- https://github.com/omololevy/github-readme-activity-graph -->
-<a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="Bryan's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
+
+<a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="My Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=000000&color=f48c06&line=31e981&point=FFFFFF&hide_border=true " /></a>
