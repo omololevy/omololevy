@@ -86,6 +86,7 @@ Here are some ideas to get you started:
 <a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="Levy Cotech's Contribution Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=1F222E&color=F8D866&line=31e981&point=FFFFFF&hide_border=true" /></a>
 
 ## 📫 CONTACT INFORMATION
+Email me via cotechlevy@gmail.com
 <p align="center">
   <a href="https://github.com/omololevy/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com/?lines=Email%20me%20via%20cotechlevy@gmail.com;I%20am%20ready%20to%20work%20with%20you!;&font=Fira%20Code&center=true&width=440&height=45&color=FFFFFF&vCenter=true&size=22"></a>
 </p>
