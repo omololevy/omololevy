@@ -80,5 +80,5 @@ Here are some ideas to get you started:
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=omololevy&theme=highcontrast&layout=compa")](https://git.io/streak-stats)
 
 #### Graph
-
-<a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="My Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=000000&color=f48c06&line=31e981&point=FFFFFF&hide_border=true " /></a>
+<!-- https://github.com/omololevy/github-readme-activity-graph -->
+<a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="Levy Cotech's Contribution Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
