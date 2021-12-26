@@ -81,4 +81,4 @@ Here are some ideas to get you started:
 
 #### Graph
 <!-- https://github.com/omololevy/github-readme-activity-graph -->
-<a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="Levy Cotech's Contribution Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
+<a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="Levy Cotech's Contribution Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=1F222E&color=F8D866&line=31e981&point=FFFFFF&hide_border=true" /></a>
