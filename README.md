@@ -19,6 +19,13 @@ Here are some ideas to get you started:
 <!-- GREETING  -->
 <h3 align="center">
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">Hello! I'm Levy Cotech. Welcome to my profile.
+
+  <p align="center">
+<a href="https://levyportfolio.herokuapp.com/"><img src="https://img.shields.io/badge/PORTFOLIO-CC6699?style=for-the-badge&logoColor=white alt="Portfolio" /></a>&nbsp;
+<a href="https://www.linkedin.com/in/levy-omolo-43236222a/"><img src="https://img.shields.io/badge/linkedin-430098?style=for-the-badge&logo=linkedin&logoColor=white" alt="CodePen" /></a>&nbsp;
+<a href="https://twitter.com/kaylor254"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" /></a>&nbsp;
+<a href="https://www.hackerrank.com/levy_omolo"><img src="https://img.shields.io/badge/hackerrank-0A0A0A?style=for-the-badge&logo=hackerrank&logoColor=white alt="Dev.to" /></a>&nbsp;
+</p>
 </h3> <br><br>
 
 <!-- BADGES -->
