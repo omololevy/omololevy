@@ -112,7 +112,7 @@ Email me via cotechlevy@gmail.com <br>
 </p>
 
 
-<img align="right" alt="Developer Levy Omolo" src="https://github.com/UsamaSarwar/UsamaSarwar/raw/main/code.gif" width="500" height="320" />
+<img align="right" alt="Developer Levy Omolo" src="code.gif" width="500" height="320" />
 
 
     
