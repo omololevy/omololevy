@@ -14,7 +14,12 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-![Image](https://github.com/omololevy/omololevy/blob/master/Profile.png?raw=true)
+<div align="center">
+
+  ![Image](https://github.com/omololevy/omololevy/blob/master/Profile.png?raw=true)
+
+</div><br>
+
 
 <!-- GREETING  -->
 <h3 align="center">
@@ -84,17 +89,33 @@ Here are some ideas to get you started:
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omololevy&theme=highcontrast" />
 </a>
 
-#### Consistency
+#### Consistency:
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=omololevy&theme=highcontrast&layout=compa")](https://git.io/streak-stats)
 
-#### Graph
+### Achievements:
+
+<div align="center">  
+<img align="center" src="https://github-profile-trophy.vercel.app/?username=omololevy&margin-w=15&margin-h=15" />
+
+</div>
+
+#### Graph:
 <!-- https://github.com/omololevy/github-readme-activity-graph -->
 <a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="Levy Cotech's Contribution Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=1F222E&color=F8D866&line=31e981&point=FFFFFF&hide_border=true" /></a>
 
-## 📫 Contact Information
+## 📫 Contact Information:
 Email me via cotechlevy@gmail.com <br>
 [Linkedin](https://www.linkedin.com/in/levy-omolo/)
 <p align="center">
   <a href="https://github.com/omololevy/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com/?lines=Email%20me%20via%20cotechlevy@gmail.com;I%20am%20ready%20to%20work%20with%20you!;&font=Fira%20Code&center=true&width=440&height=45&color=FFFFFF&vCenter=true&size=22"></a>
 </p>
+
+
+<img align="right" alt="Developer Levy Omolo" src="https://github.com/UsamaSarwar/UsamaSarwar/raw/main/code.gif" width="500" height="320" />
+
+
+    
+## Current Project ⚕
+<br>![](https://img.shields.io/badge/Web-apps-FE7A16?style=for-the-badge&logo=google-chrome&logoColor=white) <br>
+DEVELOPMENT
