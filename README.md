@@ -117,5 +117,5 @@ Email me via cotechlevy@gmail.com <br>
 
     
 ## Current Project ⚕
-<br>![](https://img.shields.io/badge/Web-apps-FE7A16?style=for-the-badge&logo=google-chrome&logoColor=white) <br>
-DEVELOPMENT
+<br>![](https://img.shields.io/badge/Web-apps-FE7A16?style=for-the-badge&logo=google-chrome&logoColor=white)
+![](https://img.shields.io/badge/development-FE7A16?style=for-the-badge&logo=ubuntu&logoColor=white)
