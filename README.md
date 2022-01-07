@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-![Banner](https://github.com/omololevy/omololevy/blob/master/Profile.png?raw=true)
+![Image](https://github.com/omololevy/omololevy/blob/master/Profile.png?raw=true)
 
 <!-- GREETING  -->
 <h3 align="center">
