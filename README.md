@@ -6,11 +6,12 @@
             
             
 </div>
-<div>
+<div align="center">
             <img src="https://img.icons8.com/fluency/30/000000/star.png" />
             <img src="https://img.icons8.com/fluency/30/000000/star.png" />
             <img src="https://img.icons8.com/fluency/30/000000/star.png" />
-            <img src="https://img.icons8.com/fluency/30/000000/star.png" /><img src="https://img.icons8.com/fluency/30/000000/star.png" /> </div><br>
+            <img src="https://img.icons8.com/fluency/30/000000/star.png" /><img src="https://img.icons8.com/color/30/000000/star--v1.png"/>
+ </div><br>
 
 
 <!-- GREETING  -->
