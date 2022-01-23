@@ -118,3 +118,6 @@ Email me via <a href="mailto:cotechlevy@gmail.com"> cotechlevy@gmail.com <br>
 ## Current Project ⚕
 <br>![](https://img.shields.io/badge/Web-apps-FE7A16?style=for-the-badge&logo=google-chrome&logoColor=white)
 ![](https://img.shields.io/badge/development-FE7A16?style=for-the-badge&logo=ubuntu&logoColor=white)
+
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=omololevy&label=Seen%20by&color=0e75b6&style=flat" alt="omololevy" /> </p>
+
