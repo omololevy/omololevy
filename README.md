@@ -27,7 +27,7 @@
 
 <p align="center">
   <a href="https://levy-omolo.herokuapp.com/">
-    <img src="https://img.shields.io/badge/PORTFOLIO-CC6699?style=for-the-badge&logoColor=white alt="Portfolio" />
+    <img src="https://img.shields.io/badge/PORTFOLIO-CC6699?style=for-the-badge&logoColor=white" alt="Portfolio" />
   </a>&nbsp;
   <a href="https://www.linkedin.com/in/levy-omolo/">
     <img src="https://img.shields.io/badge/linkedin-430098?style=for-the-badge&logo=linkedin&logoColor=white" alt="CodePen" />
@@ -39,10 +39,10 @@
     <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
   </a>&nbsp;
   <a href="https://www.hackerrank.com/levy_omolo">
-    <img src="https://img.shields.io/badge/hackerrank-0A0A0A?style=for-the-badge&logo=hackerrank&logoColor=white alt="Dev.to" />
+    <img src="https://img.shields.io/badge/hackerrank-0A0A0A?style=for-the-badge&logo=hackerrank&logoColor=white" alt="Dev.to" />
   </a>&nbsp;
   <a href="https://www.researchgate.net/profile/Levy-Omolo-2">
-    <img src="https://img.shields.io/badge/researchgate-4c334d?style=for-the-badge&logo=researchgate&logoColor=white alt="Dev.to" />
+    <img src="https://img.shields.io/badge/researchgate-4c334d?style=for-the-badge&logo=researchgate&logoColor=white" alt="Dev.to" />
   </a>&nbsp;
 </p>
  <br><br>
