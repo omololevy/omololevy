@@ -12,6 +12,7 @@
             <img src="https://img.icons8.com/fluency/30/000000/star.png" />
             <img src="https://img.icons8.com/fluency/30/000000/star.png" /><img src="https://img.icons8.com/color/30/000000/star--v1.png"/>
  </div><br>
+ <p align="center"> <img src="https://komarev.com/ghpvc/?username=omololevy&label=Profile%20viewers:&color=FE7A16&style=for-the-badge" alt="omololevy" /> </p>
 
 
 <!-- GREETING  -->
@@ -117,6 +118,4 @@ Email me via <a href="mailto:cotechlevy@gmail.com"> cotechlevy@gmail.com <br>
 ## Current Project ⚕
 <br>![](https://img.shields.io/badge/Web-apps-FE7A16?style=for-the-badge&logo=google-chrome&logoColor=white)
 ![](https://img.shields.io/badge/development-FE7A16?style=for-the-badge&logo=ubuntu&logoColor=white)
-
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=omololevy&label=Profile%20viewers:&color=FE7A16&style=for-the-badge" alt="omololevy" /> </p>
 
