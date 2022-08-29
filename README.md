@@ -116,7 +116,11 @@ Email me via <a href="mailto:cotechlevy@gmail.com"> cotechlevy@gmail.com <br>
 
 
 <img align="right" alt="Developer Levy Omolo" src="code.gif" width="500" height="320" />
-
+<div align="center">
+  
+  ![Snake animation](https://github.com/omololevy/omololevy/blob/output/github-contribution-grid-snake.svg)
+  
+</div>
 
     
 ## Current Project ⚕
