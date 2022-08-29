@@ -2,7 +2,7 @@ name: Generate Datas
 
 on:
   schedule: # execute every 3 days
-    - cron: "* */3 * * *"
+    - cron: "* */2 * * *"
   workflow_dispatch:
 
 jobs:
