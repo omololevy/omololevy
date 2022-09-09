@@ -1,11 +1,6 @@
 # LEVY OMOLO (omololevy)
 
-<div align="center">
 
-  ![Image](https://github.com/omololevy/omololevy/blob/master/Profile.png?raw=true)
-            
-            
-</div>
 <div align="center">
             <img src="https://img.icons8.com/fluency/30/000000/star.png" />
             <img src="https://img.icons8.com/fluency/30/000000/star.png" />
