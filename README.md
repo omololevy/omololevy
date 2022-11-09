@@ -19,6 +19,7 @@
   <a href="https://github.com/omololevy/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com/?lines=%20Follow%20if%20you%20find%20me%20cool!;I%20follow-back%20soonest.;%20My%20mail%20is%20cotechlevy@gmail.com;I%20am%20ready%20for%20collaboration.;%20Fork,%20clone,%20star,%20or%20download;%20any%20repo%20of%20your%20choice!&font=Fira%20Code&center=true&width=440&height=45&color=FFFFFF&vCenter=true&size=22"></a>
 </p>
 
+<div align="center"> Social and Contact Info. </div><br>
   <p align="center">
 <a href="https://levy-omolo.herokuapp.com/"><img src="https://img.shields.io/badge/PORTFOLIO-fff?style=for-the-badge&logo=googlechrome&logoColor=blue" alt="Portfolio" /></a>&nbsp;
 <a href="https://www.linkedin.com/in/levy-omolo/"><img src="https://img.shields.io/badge/linkedin-430098?style=for-the-badge&logo=linkedin&logoColor=white" alt="CodePen" /></a>&nbsp;
@@ -28,35 +29,19 @@
 <a href="https://www.researchgate.net/profile/Levy-Omolo-2"><img src="https://img.shields.io/badge/researchgate-4c334d?style=for-the-badge&logo=researchgate&logoColor=02c39a" alt="Dev.to" /></a>&nbsp;
 
 <a href="https://docs.google.com/document/d/15PXlkE-0aQZxIheTUT4qcEKU6Oy2F5wPQ3AtoF8yIOY/edit?usp=sharing"><img src="https://img.shields.io/badge/Résumé-d62828?style=for-the-badge&logo=researchgate&logoColor=02c39a" alt="Dev.to" /></a>&nbsp;
-</p>
-</h3> <br><br>
+</p><br>
 
 <!-- BADGES -->
-<p align="left">
+<p align="center">
 <img src="https://img.shields.io/badge/Interest-Artificial Intelligence-blue"/>
 <img src="https://img.shields.io/badge/Hobby-Coding-blue" />
 <img src="https://img.shields.io/badge/Programming-Python%2C%20JavaScript-blue" />
 <img src="https://img.shields.io/badge/Lives-Nairobi-blue" />
 <img src="https://img.shields.io/badge/Language-English%2C%20Swahili-blue" />
-</p>
+</p><br>
 
 
-
-## 👨‍💻 Programming Languages
-![](https://img.shields.io/badge/html-orange?style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/css-430098?style=for-the-badge&logo=css3&logoColor=white)
-![](https://img.shields.io/badge/'-javascript-yellow?style=for-the-badge&logo=javascript&logoColor=ffd60a) ![](https://img.shields.io/badge/typescript-777BB4?style=for-the-badge&logo=typescript&logoColor=white) ![](https://img.shields.io/badge/python-276DC3?style=for-the-badge&logo=python&logoColor=white)
-
-##  🧰 Frameworks & Libraries
-![](https://img.shields.io/badge/Bootstrap-430098?style=for-the-badge&logo=bootstrap&logoColor=white) ![](https://img.shields.io/badge/JQUERY-430098?style=for-the-badge&logo=JQUERY&logoColor=white) ![](https://img.shields.io/badge/angular-777BB4?style=for-the-badge&logo=angular&logoColor=white)  ![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![](https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white) ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-## ⚡ Databases
-![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![](https://img.shields.io/badge/SQLITE-4EA94B?style=for-the-badge&logo=sqlite&logoColor=white) 
-
-## ☁ Cloud Technologies
-![](https://img.shields.io/badge/github_pages-232F3E?style=for-the-badge&logo=github&logoColor=white) ![](	https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) 
-
-## 💻 Operating Systems
-![](https://img.shields.io/badge/ubuntu-87CF3E?style=for-the-badge&logo=ubuntu&logoColor=ff6d00) ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+<div align="center">
 
 ## 🎓📚 Education 
 ![](https://img.shields.io/badge/maseno_universty-87CF3E?style=for-the-badge&logo=maseno&logoColor=white)
@@ -65,26 +50,165 @@
  
  ![](https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white) 
 
-### 👩‍💻 IDEs
-![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)![](https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white) ![](https://img.shields.io/badge/anaconda-green.svg?&style=for-the-badge&logo=anaconda&logoColor=white) ![](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white) 
+</div>
 
-## Development Tools
-![](https://img.shields.io/badge/trello-00000F.svg?&style=for-the-badge&logo=trello&logoColor=white)
-![](https://img.shields.io/badge/figma-316192.svg?&style=for-the-badge&logo=figma&logoColor=white)
-![](https://img.shields.io/badge/coolors-0078D6.svg?&style=for-the-badge&logo=coolors&logoColor=white)
+
+
+</h3> <br><br>
+
+## Skills and Tools
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th colspan="7">Languages</th>
+      </tr>
+    </thead>
+    <tr>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> </td>
+    </tr>
+    <tr> 
+      <td align="center" width=110>Python</td>
+      <td align="center" width=110>JavaScript</td>
+      <td align="center" width=110>Typescript</td>
+      <td align="center" width=110>CSS</td>
+      <td align="center" width=110>HTML</td>
+    </tr>
+    <tr>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"/> </td>
+    <tr> 
+      <td align="center" width=110>PostgreSQL</td>
+      <td align="center" width=110>MySQL</td>
+      <td align="center" width=110>SQLite</td>
+      <td align="center" width=110>Ba$h</td>
+      <td align="center" width=110>Markdown</td>
+    </tr>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Frameworks</th>
+        <th colspan="3">Agile Methodologies</th>
+      </tr>
+    </thead>
+    <tr>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/npm/devicon-2.2@2.2.0/icons/django/django-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"/> </td>
+      <td align="center" width=110><img width=60 src="https://user-images.githubusercontent.com/27622683/192119071-da8aff75-02b1-4c6d-8232-507b9454cd49.png"/></td>
+      <td align="center" width=110><img width=60 src="https://user-images.githubusercontent.com/27622683/192119394-0284fdfc-3ad2-460c-8b57-5ed13a2cbfc0.png"/></td>
+      <tr align="center"> 
+        <td align="center" width=110>Bootstrap</td>
+        <td align="center" width=110>Angular</td>
+        <td align="center" width=110>Django</td>
+        <td align="center" width=110>Flask</td>
+        <td align="center" width=110>Scrum</td>
+        <td align="center" width=110>T.D.D.</td>
+      </tr>
+    </tr>
+  </table>
+  <table>
+    <thead>
+    <tr>
+      <th colspan="7">Tools</th>
+    </tr>
+    </thead>
+    <tr>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/> </td>
+    </tr>
+    <tr> 
+      <td align="center" width=110>Heroku</td>
+      <td align="center" width=110>Figma</td>
+      <td align="center" width=110>Git</td>
+      <td align="center" width=110>GitHub</td>
+    </tr>
+    <tr>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg"/> </td> 
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"/> </td> 
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-plain.svg"/> </td>
+    </tr>
+    <tr> 
+      <td align="center" width=110>VSCode</td>
+      <td align="center" width=110>Pycharm</td>
+      <td align="center" width=110>IntelliJ</td>
+      <td align="center" width=110>Vim</td>
+      <td align="center" width=110>Google Cloud</td>
+      <td align="center" width=110>CodePen</td>
+    </tr>
+    <tr>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-line.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"/> </td>
+    </tr>
+    <tr> 
+      <td align="center" width=110>Docker</td>
+      <td align="center" width=110>Jenkins</td>
+      <td align="center" width=110>Jupyter</td>
+      <td align="center" width=110>Jira</td>
+    </tr>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="7">Operating Systems</th>
+      </tr>
+    </thead>
+    <tr>
+      <td align="center" width=110><img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"/> </td>
+      <td align="center" width=110> <img height=60 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-plain.svg"/> </td>
+    <tr> 
+      <td align="center" width=110>Windows</td>
+      <td align="center" width=110>Linux</td>
+      <td align="center" width=110>Ubuntu</td>
+      <td align="center" width=110>Debian</td>
+    </tr>
+  </table>
+</div>
+
+
+
+
 
 ## 📊 GitHub Statistics
-#### Score
-<a href="https://github.com/omololevy/omololevy">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=omololevy&show_icons=true&line_height=27&count_private=true&title_color=f48c06&text_color=c9cacc&icon_color=2bbc8a&bg_color=000000" alt="Bryan's GitHub Stats" />
-</a>
+<br>
+<div align="left">
 
-#### Languages
-
+  <a href="https://github.com/omololevy/omololevy">
+    <img align="center" src="https://github-readme-stats.vercel.app/api?username=omololevy&show_icons=true&line_height=27&count_private=true&title_color=f48c06&text_color=c9cacc&icon_color=2bbc8a&bg_color=000000" alt="Bryan's GitHub Stats" />
+  </a>
+</div>
+<div align="right">
 
   <a href="https://github.com/omololevy/github-readme-stats">
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omololevy&theme=highcontrast" />
 </a>
+  </div>
+
+<div align="left">
+    <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=omololevy"/>
+</div>
+<div align="right">
+    <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=omololevy"/>
+</div>
 
 #### Consistency:
 
