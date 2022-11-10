@@ -200,22 +200,14 @@
 <div align="left">
 
   <a href="https://github.com/omololevy/omololevy">
-    <img align="center" src="https://github-readme-stats.vercel.app/api?username=omololevy&show_icons=true&line_height=27&count_private=true&title_color=f48c06&text_color=c9cacc&icon_color=2bbc8a&bg_color=000000" alt="Bryan's GitHub Stats" />
+    <img align="center" src="https://github-readme-stats.vercel.app/api?username=omololevy&show_icons=true&line_height=27&count_private=true&title_color=f48c06&text_color=c9cacc&icon_color=2bbc8a&bg_color=000000" alt="Levy's GitHub Stats" /> &nbsp; <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omololevy&theme=highcontrast" />
   </a>
 </div>
-<div align="right">
-
-  <a href="https://github.com/omololevy/github-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omololevy&theme=highcontrast" />
-</a>
-  </div>
 
 <div align="left">
-    <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=omololevy"/>
+    <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=omololevy&theme=highcontrast"/><img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=omololevy&theme=highcontrast"/>
 </div>
-<div align="right">
-    <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=omololevy"/>
-</div>
+
 
 #### Consistency:
 
