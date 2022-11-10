@@ -96,7 +96,7 @@
   <table>
     <thead>
       <tr>
-        <th colspan="3">Frameworks </th>
+        <th colspan="3">Frameworks & Libraries </th>
         <th colspan="3">Agile Methodologies</th>
       </tr>
     </thead>
