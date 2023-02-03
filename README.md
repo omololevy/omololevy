@@ -196,52 +196,54 @@
 
 
 ## 📊 GitHub Statistics
-<br>
-<div align="left">
-
-  <a href="https://github.com/omololevy/omololevy">
-    <img align="center" src="https://github-readme-stats.vercel.app/api?username=omololevy&show_icons=true&line_height=27&count_private=true&title_color=f48c06&text_color=c9cacc&icon_color=2bbc8a&bg_color=000000" alt="Levy's GitHub Stats" /> &nbsp; <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omololevy&theme=highcontrast" />
+<table>
+<tr>
+<td>
+<a href="https://github.com/omololevy/omololevy">
+    <img align="center" src="https://github-readme-stats.vercel.app/api?username=omololevy&show_icons=true&line_height=27&count_private=true&title_color=f48c06&text_color=c9cacc&icon_color=2bbc8a&bg_color=000000" alt="Levy's GitHub Stats" />
+</td>
+<td>
+            <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omololevy&theme=highcontrast&layout=compact" />
   </a>
-</div>
+</td>
+</tr>
 
-<div align="left">
-    <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=omololevy"/><img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=omololevy"/>
-</div>
+<tr>
+<td>
+            <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=omololevy"/>
+</td>
+<td>
+            <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=omololevy"/>
+</td>
+</tr>
 
+<tr>
+<tr>
+        <th colspan="7"><a href="https://github.com/omololevy/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com/?lines=Email%20me%20via%20cotechlevy@gmail.com;I%20am%20ready%20to%20work%20with%20you!;&font=Fira%20Code&center=true&width=440&height=45&color=FFFFFF&vCenter=true&size=22"></a></th>
+      </tr>
+<td align="center">
 
-#### Consistency:
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=omololevy&theme=highcontrast&layout=compa")](https://git.io/streak-stats)
 
-#### Graph:
-<!-- https://github.com/omololevy/github-readme-activity-graph -->
-<a href="https://github.com/omololevy/github-readme-activity-graph"><img alt="Levy Cotech's Contribution Graph" src="https://activity-graph.herokuapp.com/graph?username=omololevy&bg_color=1F222E&color=F8D866&line=31e981&point=FFFFFF&hide_border=true" /></a>
 
-### Achievements:
+</td>
+<td align="center">
+<p align="center">
+</p>
+            <img align="right" alt="Developer Levy Omolo" src="code.gif" width="350" height="190" />
+</td>
+</tr>
+</table>
 
-<div align="center">  
-<img align="center" src="https://github-profile-trophy.vercel.app/?username=omololevy&margin-w=15&margin-h=15" />
+### The Psych:
+
+<div>  
+<img src="https://github-profile-trophy.vercel.app/?username=omololevy&margin-w=15&margin-h=15" />
 
 </div>
-
-
-## 📫 Contact Information:
-Email me via <a href="mailto:cotechlevy@gmail.com"> cotechlevy@gmail.com <br>
-[Linkedin](https://www.linkedin.com/in/levy-omolo/)
-<p align="center">
-  <a href="https://github.com/omololevy/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com/?lines=Email%20me%20via%20cotechlevy@gmail.com;I%20am%20ready%20to%20work%20with%20you!;&font=Fira%20Code&center=true&width=440&height=45&color=FFFFFF&vCenter=true&size=22"></a>
-</p>
-
-
-<img align="right" alt="Developer Levy Omolo" src="code.gif" width="500" height="320" />
-<div align="center">
+<div align="right">
   
   ![Snake animation](https://github.com/omololevy/omololevy/blob/output/github-contribution-grid-snake.svg)
   
 </div>
-
-    
-
-## Current Project ⚕
-<br>![](https://img.shields.io/badge/Web-apps-FE7A16?style=for-the-badge&logo=google-chrome&logoColor=white)
-![](https://img.shields.io/badge/development-FE7A16?style=for-the-badge&logo=ubuntu&logoColor=white)
