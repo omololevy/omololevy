@@ -236,7 +236,7 @@
 </tr>
 </table>
 
-### The Psych:
+### The Pace:
 
 <div>  
 <img src="https://github-profile-trophy.vercel.app/?username=omololevy&margin-w=15&margin-h=15" />
