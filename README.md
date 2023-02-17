@@ -247,3 +247,5 @@
   ![Snake animation](https://github.com/omololevy/omololevy/blob/output/github-contribution-grid-snake.svg)
   
 </div>
+
+### You like it ! Hey , give it a star <img src="https://img.icons8.com/fluency/30/000000/star.png" /> [here](https://github.com/omololevy/omololevy/) !
