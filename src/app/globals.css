@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default light theme */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --background-end: #f5f5f5;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --background-end: #1a1a1a;
+}
+
+/* Apply system preference if no theme is set */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Additional styles for homepage */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--background), var(--background-end));
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(4px);
+}
+
+/* Animation styles */
+canvas {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: screen;
+}
+
+[data-theme="dark"] canvas {
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
