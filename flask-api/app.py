@@ -1,7 +1,22 @@
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
+from flask_mail import Mail, Message
+import os
 
 app = Flask(__name__)
+CORS(app)
+
+# Email configuration
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')  # Your Gmail address
+app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')  # Your Gmail app password
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('EMAIL_USER')
+
+mail = Mail(app)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///projects.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -31,6 +46,38 @@ def get_projects():
     else:
         projects = Project.query.all()
     return jsonify([project.to_dict() for project in projects])
+
+@app.route('/contact', methods=['POST'])
+def handle_contact():
+    try:
+        data = request.json
+        name = data.get('name')
+        email = data.get('email')
+        subject = data.get('subject')
+        message = data.get('message')
+
+        # Create email message
+        msg = Message(
+            subject=f"Portfolio Contact: {subject}",
+            recipients=[os.environ.get('EMAIL_USER')],  # Your email address
+            body=f"""
+            New contact form submission:
+            
+            From: {name} ({email})
+            Subject: {subject}
+            
+            Message:
+            {message}
+            """
+        )
+
+        # Send email
+        mail.send(msg)
+
+        return jsonify({"message": "Message sent successfully"}), 200
+    except Exception as e:
+        print(e)  # For debugging
+        return jsonify({"error": "Failed to send message"}), 500
 
 @app.errorhandler(404)
 def not_found(error):
