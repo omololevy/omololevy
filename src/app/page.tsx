@@ -2,18 +2,18 @@ import SkillBadge from "@/components/SkillBadge";
 import AnimatedBackground from '@/components/AnimatedBackground';
 
 const skills = [
-  { name: "Python", icon: "/icons/python.svg", color: "bg-yellow-100 text-yellow-800" },
-  { name: "React", icon: "/icons/react.svg", color: "bg-blue-100 text-blue-800" },
-  { name: "TypeScript", icon: "/icons/typescript.svg", color: "bg-blue-100 text-blue-800" },
-  { name: "Node.js", icon: "/icons/nodejs.svg", color: "bg-green-100 text-green-800" },
-  { name: "Django", icon: "/icons/django.svg", color: "bg-green-100 text-green-800" },
-  { name: "GraphQL", icon: "/icons/graphql.svg", color: "bg-pink-100 text-pink-800" },
-  { name: "Docker", icon: "/icons/docker.svg", color: "bg-blue-100 text-blue-800" },
-  { name: "Kubernetes", icon: "/icons/kubernetes.svg", color: "bg-blue-100 text-blue-800" },
-  { name: "PostgreSQL", icon: "/icons/postgresql.svg", color: "bg-blue-100 text-blue-800" },
-  { name: "Angular", icon: "/icons/angular.svg", color: "bg-red-100 text-red-800" },
-  { name: "Next.js", icon: "/icons/nextjs.svg", color: "bg-gray-100 text-gray-800" },
-  { name: "Firebase", icon: "/icons/firebase.svg", color: "bg-yellow-100 text-yellow-800" },
+  { name: "Python", icon: "/icons/python-svgrepo-com.svg", color: "bg-yellow-100 text-yellow-800" },
+  { name: "React", icon: "/icons/react-svgrepo-com.svg", color: "bg-blue-100 text-blue-800" },
+  { name: "TypeScript", icon: "/icons/typescript-svgrepo-com.svg", color: "bg-blue-100 text-blue-800" },
+  { name: "Node.js", icon: "/icons/node-js-svgrepo-com.svg", color: "bg-green-100 text-green-800" },
+  { name: "Django", icon: "/icons/django-svgrepo-com.svg", color: "bg-green-100 text-green-800" },
+  { name: "GraphQL", icon: "/icons/graphql-svgrepo-com.svg", color: "bg-pink-100 text-pink-800" },
+  { name: "Docker", icon: "/icons/docker-svgrepo-com.svg", color: "bg-blue-100 text-blue-800" },
+  { name: "Kubernetes", icon: "/icons/kubernetes-svgrepo-com.svg", color: "bg-blue-100 text-blue-800" },
+  { name: "PostgreSQL", icon: "/icons/postgresql-svgrepo-com.svg", color: "bg-blue-100 text-blue-800" },
+  { name: "Angular", icon: "/icons/angular-svgrepo-com.svg", color: "bg-red-100 text-red-800" },
+  { name: "Next.js", icon: "/icons/nextjs-svgrepo-com.svg", color: "bg-gray-100 text-gray-800" },
+  { name: "Firebase", icon: "/icons/firebase-svgrepo-com.svg", color: "bg-yellow-100 text-yellow-800" },
 ];
 
 export default function Home() {
