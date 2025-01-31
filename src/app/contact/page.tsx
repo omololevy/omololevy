@@ -9,11 +9,43 @@ export default function Contact() {
     subject: '',
     message: '',
   });
+  const [status, setStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus({
+          type: 'success',
+          message: 'Message sent successfully! I will get back to you soon.',
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -84,11 +116,29 @@ export default function Contact() {
                   ></textarea>
                 </div>
               </div>
+              
+              {status.message && (
+                <div
+                  className={`p-4 rounded-lg ${
+                    status.type === 'success'
+                      ? 'bg-green-100 text-green-800'
+                      : 'bg-red-100 text-red-800'
+                  }`}
+                >
+                  {status.message}
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors"
+                disabled={isSubmitting}
+                className={`w-full px-6 py-3 bg-foreground text-background rounded-lg transition-colors ${
+                  isSubmitting
+                    ? 'opacity-50 cursor-not-allowed'
+                    : 'hover:bg-foreground/90'
+                }`}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
 
