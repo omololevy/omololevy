@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* Logo - visible on all screens */}
         <Link href="/" className="text-xl font-bold">
-          Portfolio
+          Levy Omolo
         </Link>
 
         {/* Desktop Menu - Hidden on mobile */}
@@ -63,7 +63,7 @@ export default function Navbar() {
         {/* Mobile Profile Picture */}
         <div className="sm:hidden">
           <Image
-            src="/profile-picture.jpg" // Make sure to add your profile picture
+            src="/images/profile-picture.png" // Make sure to add your profile picture
             alt="Profile"
             width={32}
             height={32}
