@@ -6,7 +6,7 @@ const skills = [
   { name: "React", icon: "/icons/react-svgrepo-com.svg", color: "bg-blue-100 text-blue-800" },
   { name: "TypeScript", icon: "/icons/typescript-svgrepo-com.svg", color: "bg-blue-100 text-blue-800" },
   { name: "Node.js", icon: "/icons/node-js-svgrepo-com.svg", color: "bg-green-100 text-green-800" },
-  { name: "Django", icon: "/icons/django-svgrepo-com.svg", color: "bg-green-100 text-green-800" },
+  { name: "Django", icon: "/icons/django-icon-svgrepo-com.svg", color: "bg-green-100 text-green-800" },
   { name: "GraphQL", icon: "/icons/graphql-svgrepo-com.svg", color: "bg-pink-100 text-pink-800" },
   { name: "Docker", icon: "/icons/docker-svgrepo-com.svg", color: "bg-blue-100 text-blue-800" },
   { name: "Kubernetes", icon: "/icons/kubernetes-svgrepo-com.svg", color: "bg-blue-100 text-blue-800" },
