@@ -5,7 +5,7 @@ import ProjectFilter from "../../components/ProjectFilter";
 import AnimatedBackground from "../../components/AnimatedBackground";
 
 export default function Projects() {
-  const projects = [
+  const projects = useMemo(() => [
     {
       title: "E-commerce Platform",
       description:
@@ -23,7 +23,7 @@ export default function Projects() {
       tags: ["Python", "Django", "PostgreSQL", "Docker"],
     },
     // Add more projects with relevant tags
-  ];
+  ], []);
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
