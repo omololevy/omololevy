@@ -34,11 +34,6 @@ export default function RootLayout({
       <head>
         {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" 
-          rel="stylesheet"
-          as="style"
-        />
         <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
