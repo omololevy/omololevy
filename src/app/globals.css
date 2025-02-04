@@ -46,6 +46,22 @@ body {
     @apply bg-white dark:bg-[#051633] p-6 rounded-lg shadow-lg 
            transform transition-transform duration-300 hover:scale-105;
   }
+  
+  .policy-content {
+    @apply space-y-6;
+  }
+  
+  .policy-content p {
+    @apply text-gray-600 dark:text-gray-300 leading-relaxed;
+  }
+  
+  .policy-content ul {
+    @apply list-disc list-inside space-y-2 ml-4;
+  }
+  
+  .policy-content a {
+    @apply text-[#05347e] dark:text-[#ffbd59] hover:underline;
+  }
 }
 
 @layer utilities {
