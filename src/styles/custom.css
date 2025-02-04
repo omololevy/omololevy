@@ -1,0 +1,15 @@
+/* Custom styles from index.html */
+link[rel="shortcut icon"] {
+  width: 50px;
+  height: 50px;
+}
+
+/* Add Source Sans Pro as fallback font */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Gradient styles */
+.gradient1 {
+  background: linear-gradient(90deg, #ffbd59 0%, #05347e 100%);
+}
