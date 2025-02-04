@@ -2,6 +2,7 @@
 
 import { useTheme } from "@/app/context/ThemeContext";
 import Image from "next/image";
+import Link from "next/link";
 import MobileMenu from "../MobileMenu";
 
 export default function Navbar() {
@@ -11,7 +12,7 @@ export default function Navbar() {
     <nav className="fixed w-full z-30 top-0 bg-white/80 dark:bg-[#051633]/80 backdrop-blur-sm shadow-md dark:shadow-[#ffbd59]/10">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/img/logo.png"
             alt="Kiungor"
@@ -22,7 +23,7 @@ export default function Navbar() {
           <span className="text-xl font-bold text-[#05347e] dark:text-[#ffbd59]">
             KIUNGOR
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center space-x-8">
