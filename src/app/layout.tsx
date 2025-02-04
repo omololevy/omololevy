@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "./context/ThemeContext";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Kiungor - Embracing New Beginnings, Together!",
-  description: "Connect with other migrants who share your interests and experiences, gain access to migration resources, job listings, and language translation services.",
-  keywords: "immigrants, immigration, travel abroad, immigrants community, like-minded, migrants, migration, migrants community, Kiungor, jobs for immigrants, international students, study abroad, work abroad",
+  description:
+    "Connect with other migrants who share your interests and experiences, gain access to migration resources, job listings, and language translation services.",
+  keywords:
+    "immigrants, immigration, travel abroad, immigrants community, like-minded, migrants, migration, migrants community, Kiungor, jobs for immigrants, international students, study abroad, work abroad",
   authors: [{ name: "Kiungor" }],
   other: {
     "google-site-verification": "YOUR_VERIFICATION_CODE",
@@ -36,9 +39,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <ThemeProvider>
           {children}
+          <Toaster position="bottom-right" />
         </ThemeProvider>
 
         {/* Segment Analytics */}
@@ -52,8 +58,8 @@ export default function RootLayout({
         </Script>
 
         {/* Google Analytics */}
-        <Script 
-          src="https://www.googletagmanager.com/gtag/js?id=G-GCZKBF5524" 
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GCZKBF5524"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
