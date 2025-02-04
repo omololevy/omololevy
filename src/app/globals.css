@@ -4,13 +4,17 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #05347e;
+  --primary: #ffbd59;
+  --primary-dark: #05347e;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #051633;
+    --foreground: #ffbd59;
+    --primary: #05347e;
+    --primary-dark: #ffbd59;
   }
 }
 
@@ -18,4 +22,54 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #ffbd59 0%, #05347e 100%);
+}
+
+@layer components {
+  .nav-link {
+    @apply inline-block font-bold py-2 px-4 text-[#05347e] dark:text-[#ffbd59] hover:opacity-80;
+  }
+  
+  .primary-button {
+    @apply mx-auto lg:mx-0 bg-[#ffbd59] text-[#05347e] dark:bg-[#05347e] dark:text-[#ffbd59] 
+           font-bold rounded-full py-4 px-8 shadow-lg 
+           focus:outline-none focus:ring-2 focus:ring-[#05347e] dark:focus:ring-[#ffbd59] 
+           transform transition hover:scale-105 duration-300 ease-in-out;
+  }
+  
+  .feature-card {
+    @apply bg-white dark:bg-[#051633] p-6 rounded-lg shadow-lg 
+           transform transition-transform duration-300 hover:scale-105;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+html {
+  transition: background-color 0.3s ease;
+  scroll-behavior: smooth;
+  @apply transition-colors duration-200;
+}
+
+html.dark {
+  background-color: var(--background);
+  color: var(--foreground);
+  @apply bg-[#051633] text-[#ffbd59];
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-200;
+  }
+}
+
+html.dark body {
+  @apply bg-[#051633] text-[#ffbd59];
 }
