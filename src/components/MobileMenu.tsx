@@ -49,6 +49,18 @@ export default function MobileMenu() {
             >
               Career
             </a>
+            <a
+              href="/faqs"
+              className="text-[#05347e] dark:text-[#ffbd59] hover:opacity-80"
+            >
+              FAQs
+            </a>
+            <a
+              href="/corporate"
+              className="text-[#05347e] dark:text-[#ffbd59] hover:opacity-80"
+            >
+              Corporate Partners
+            </a>
             <div className="flex flex-col space-y-2">
               <a
                 href="/login"
