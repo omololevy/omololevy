@@ -6,32 +6,32 @@ import Image from "next/image";
 const partners = [
   {
     name: "Immigration Support Services",
-    logo: "/img/partners/partner1.svg",
+    logo: "/img/partners/partner1.jpeg",
     category: "Government",
   },
   {
     name: "Global Refugee Aid",
-    logo: "/img/partners/partner2.svg",
+    logo: "/img/partners/partner4.jpeg",
     category: "NGO",
   },
   {
     name: "Immigrant Integration Center",
-    logo: "/img/partners/partner3.svg",
+    logo: "/img/partners/partner1.jpeg",
     category: "NGO",
   },
   {
     name: "Tech for Immigration",
-    logo: "/img/partners/partner4.svg",
+    logo: "/img/partners/partner2.png",
     category: "Corporate",
   },
   {
     name: "Newcomer Support Network",
-    logo: "/img/partners/partner5.svg",
+    logo: "/img/partners/partner3.jpeg",
     category: "NGO",
   },
   {
     name: "Municipal Immigration Office",
-    logo: "/img/partners/partner6.svg",
+    logo: "/img/partners/partner2.png",
     category: "Government",
   },
 ];
