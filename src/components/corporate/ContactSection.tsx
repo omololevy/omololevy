@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
 import { useState, FormEvent, ChangeEvent } from "react";
+import { toast } from "react-hot-toast";
 
 interface FormData {
   name: string;
@@ -12,36 +13,40 @@ interface FormData {
 
 export default function ContactSection() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    organization: '',
-    email: '',
-    message: ''
+    name: "",
+    organization: "",
+    email: "",
+    message: "",
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
       // Here you would typically send the data to your API
-      console.log('Form submitted:', formData);
-      // Reset form after successful submission
+      console.log("Form submitted:", formData);
+
+      // Clear form after successful submission
       setFormData({
-        name: '',
-        organization: '',
-        email: '',
-        message: ''
+        name: "",
+        organization: "",
+        email: "",
+        message: "",
       });
-      // You could add a success message here
+
+      toast.success("Thank you for your interest! We will contact you soon.");
     } catch (error) {
-      console.error('Error submitting form:', error);
-      // Handle error (show error message to user)
+      console.error("Error submitting form:", error);
+      toast.error("Something went wrong. Please try again.");
     }
   };
 
@@ -57,9 +62,10 @@ export default function ContactSection() {
             Let&apos;s Build Together
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mb-8">
-            Ready to make a difference? Whether you represent a government agency, NGO, or business, KIUNGOR is eager to collaborate.
+            Ready to make a difference? Whether you represent a government
+            agency, NGO, or business, KIUNGOR is eager to collaborate.
           </p>
-          
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -128,11 +134,11 @@ export default function ContactSection() {
               Start Partnership Discussion
             </motion.button>
           </form>
-          
+
           <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
             <p className="text-gray-600 dark:text-gray-300 text-center">
-              Or reach out directly at{' '}
-              <a 
+              Or reach out directly at{" "}
+              <a
                 href="mailto:partnerships@kiungor.com"
                 className="text-[#05347e] dark:text-[#ffbd59] font-semibold hover:underline"
               >
