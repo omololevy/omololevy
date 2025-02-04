@@ -87,15 +87,28 @@ const faqs: FAQ[] = [
 const categories = Array.from(new Set(faqs.map(faq => faq.category)));
 
 export default function FAQAccordion() {
-  const [activeCategory, setActiveCategory] = useState<string>('General');
+  const [activeCategory, setActiveCategory] = useState<string>('All');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const filteredFaqs = faqs.filter(faq => faq.category === activeCategory);
+  // Get filtered FAQs based on category
+  const filteredFaqs = activeCategory === 'All' 
+    ? faqs 
+    : faqs.filter(faq => faq.category === activeCategory);
 
   return (
     <div>
       {/* Category Tabs */}
       <div className="flex flex-wrap gap-2 mb-8 justify-center">
+        <button
+          onClick={() => setActiveCategory('All')}
+          className={`px-4 py-2 rounded-full transition-colors ${
+            activeCategory === 'All'
+              ? 'bg-[#05347e] text-white dark:bg-[#ffbd59] dark:text-[#05347e]'
+              : 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+          }`}
+        >
+          All FAQs ({faqs.length})
+        </button>
         {categories.map((category) => (
           <button
             key={category}
@@ -106,10 +119,21 @@ export default function FAQAccordion() {
                 : 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
-            {category}
+            {category} ({faqs.filter(faq => faq.category === category).length})
           </button>
         ))}
       </div>
+
+      {/* Show category description if not "All" */}
+      {activeCategory !== 'All' && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-center mb-8 text-gray-600 dark:text-gray-300"
+        >
+          Showing {filteredFaqs.length} questions in {activeCategory}
+        </motion.div>
+      )}
 
       {/* FAQ Items */}
       <div className="space-y-4">
