@@ -1,15 +1,49 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
+
+interface FormData {
+  name: string;
+  organization: string;
+  email: string;
+  message: string;
+}
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     organization: '',
     email: '',
     message: ''
   });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      // Here you would typically send the data to your API
+      console.log('Form submitted:', formData);
+      // Reset form after successful submission
+      setFormData({
+        name: '',
+        organization: '',
+        email: '',
+        message: ''
+      });
+      // You could add a success message here
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Handle error (show error message to user)
+    }
+  };
 
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-[#ffbd59]/10 to-[#05347e]/10 dark:from-[#05347e]/20 dark:to-[#ffbd59]/20">
@@ -26,7 +60,7 @@ export default function ContactSection() {
             Ready to make a difference? Whether you represent a government agency, NGO, or business, KIUNGOR is eager to collaborate.
           </p>
           
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -34,6 +68,10 @@ export default function ContactSection() {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#041328] focus:ring-2 focus:ring-[#05347e] dark:focus:ring-[#ffbd59]"
                   placeholder="Your name"
                 />
@@ -44,6 +82,10 @@ export default function ContactSection() {
                 </label>
                 <input
                   type="text"
+                  name="organization"
+                  value={formData.organization}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#041328] focus:ring-2 focus:ring-[#05347e] dark:focus:ring-[#ffbd59]"
                   placeholder="Your organization"
                 />
@@ -55,6 +97,10 @@ export default function ContactSection() {
               </label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#041328] focus:ring-2 focus:ring-[#05347e] dark:focus:ring-[#ffbd59]"
                 placeholder="your@email.com"
               />
@@ -64,6 +110,10 @@ export default function ContactSection() {
                 Message
               </label>
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 rows={4}
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#041328] focus:ring-2 focus:ring-[#05347e] dark:focus:ring-[#ffbd59]"
                 placeholder="Tell us about your partnership ideas..."
