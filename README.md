@@ -242,10 +242,20 @@
 <img src="https://github-profile-trophy.vercel.app/?username=omololevy&margin-w=15&margin-h=15" />
 
 </div>
+<br/>
+<br/>
+<summary>
+  <g-emoji class="g-emoji" alias="chart_with_upwards_trend" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4c8.png">📈</g-emoji>
+  <strong>My Coding Habit... Check it out! </strong>
+</summary>
+<br />
+<div align="center">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=omololevy&bg_color=011662&color=79d3c3&line=c792ea&point=ffeb95&area=true&hide_border=false" border-radius="15">
+</div>
 <div align="right">
   
   ![Snake animation](https://github.com/omololevy/omololevy/blob/output/github-contribution-grid-snake.svg)
   
 </div>
 
-### You like it ! Hey , give it a star <img src="https://img.icons8.com/fluency/20/000000/star.png" /> [here](https://github.com/omololevy/omololevy/) !
+### You like it! Hey , give it a star <img src="https://img.icons8.com/fluency/20/000000/star.png" /> [here](https://github.com/omololevy/omololevy/) !
