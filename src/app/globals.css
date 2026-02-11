@@ -205,76 +205,99 @@ canvas {
 
 /* ============================================
    NAV LINK — Premium header links
-   Shimmer text effect on hover, glowing underline
+   Gradient text on hover, glowing underline,
+   glass-like active state
    ============================================ */
 .nav-link {
   position: relative;
-  padding: 8px 12px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition: all 0.4s cubic-bezier(.4,0,.2,1);
-  border-radius: 8px;
+  color: var(--foreground);
+  -webkit-text-fill-color: var(--foreground);
+  transition: color 0.35s ease, transform 0.35s cubic-bezier(.4,0,.2,1), background 0.35s ease;
+  border-radius: 10px;
 }
 
-/* Shimmer text effect */
-.nav-link::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: transparent;
-  background: linear-gradient(135deg, var(--primary), var(--accent), var(--primary));
-  background-size: 200% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer-text 3s ease-in-out infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.nav-link:hover {
-  background: rgba(8, 145, 178, 0.08);
-  color: var(--primary);
-}
-
-.nav-link:hover::before {
-  opacity: 1;
-}
-
-.nav-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px var(--primary-glow);
-}
-
-.nav-link.active {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-  color: #fff;
-}
-
-.nav-link.active::before {
-  opacity: 0;
-}
-
-/* Active underline glow */
-.nav-link.active::after {
+/* Underline indicator — sweeps in from center on hover */
+.nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  border-radius: 0 0 12px 12px;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2.5px;
   background: linear-gradient(90deg, var(--primary), var(--accent));
-  box-shadow: 0 0 15px var(--primary-glow), 0 0 30px var(--accent-glow);
-  animation: pulse-underline 2s ease-in-out infinite;
+  border-radius: 4px;
+  transition: width 0.4s cubic-bezier(.4,0,.2,1), left 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.4s ease;
+}
+
+/* ── Hover: readable colored text + underline sweep ── */
+.nav-link:hover {
+  color: var(--primary);
+  -webkit-text-fill-color: var(--primary);
+  transform: translateY(-1px);
+  background: rgba(8, 145, 178, 0.06);
+}
+
+.nav-link:hover::after {
+  width: 60%;
+  left: 20%;
+  box-shadow: 0 2px 12px var(--primary-glow);
+}
+
+/* ── Dark mode hover — neon feel ── */
+[data-theme="dark"] .nav-link:hover {
+  background: rgba(34, 211, 238, 0.06);
+  color: var(--primary);
+  -webkit-text-fill-color: var(--primary);
+  text-shadow: 0 0 12px var(--primary-glow);
+}
+
+[data-theme="dark"] .nav-link:hover::after {
+  box-shadow: 0 2px 18px var(--primary-glow), 0 0 30px var(--accent-glow);
+}
+
+/* ── Active state — solid primary color + persistent glowing bar ── */
+.nav-link.active {
+  color: var(--primary);
+  -webkit-text-fill-color: var(--primary);
+  font-weight: 750;
+}
+
+.nav-link.active::after {
+  width: 60%;
+  left: 20%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  box-shadow: 0 2px 10px var(--primary-glow);
+  animation: pulse-underline 2.5s ease-in-out infinite;
+}
+
+[data-theme="dark"] .nav-link.active {
+  text-shadow: 0 0 15px var(--primary-glow);
+}
+
+[data-theme="dark"] .nav-link.active::after {
+  box-shadow: 0 2px 20px var(--primary-glow), 0 0 40px var(--accent-glow);
+}
+
+/* ── Nav link pill container (wraps around all links on desktop) ── */
+.nav-pill-group {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 4px;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+[data-theme="dark"] .nav-pill-group {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* ============================================
@@ -282,26 +305,60 @@ canvas {
    ============================================ */
 .nav-brand {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   transition: all 0.4s cubic-bezier(.4,0,.2,1);
-}
-
-.nav-brand::before {
-  content: '';
-  position: absolute;
-  inset: -50%;
-  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: -1;
 }
 
 .nav-brand:hover {
   transform: scale(1.02);
 }
 
-.nav-brand:hover::before {
-  opacity: 0.4;
+/* ── Profile picture animated ring in dark mode ── */
+.nav-profile-ring {
+  border: 2.5px solid rgba(8, 145, 178, 0.4);
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.nav-brand:hover .nav-profile-ring {
+  border-color: var(--primary);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+[data-theme="dark"] .nav-profile-ring {
+  border-color: rgba(34, 211, 238, 0.35);
+  animation: border-glow-pulse 4s ease-in-out infinite;
+}
+
+[data-theme="dark"] .nav-brand:hover .nav-profile-ring {
+  border-color: var(--primary);
+  box-shadow: 0 0 25px var(--primary-glow), 0 0 50px var(--accent-glow);
+}
+
+/* ── Brand name styling ── */
+.nav-brand-name {
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--foreground) 40%, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.4s ease;
+}
+
+.nav-brand:hover .nav-brand-name {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+[data-theme="dark"] .nav-brand-name {
+  background: linear-gradient(135deg, var(--foreground) 30%, var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+[data-theme="dark"] .nav-brand:hover .nav-brand-name {
+  text-shadow: 0 0 30px var(--primary-glow);
 }
 
 /* ============================================
@@ -319,8 +376,8 @@ canvas {
 }
 
 @keyframes pulse-underline {
-  0%, 100% { transform: scaleX(1); opacity: 1; }
-  50% { transform: scaleX(0.98); opacity: 0.7; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
 
 @keyframes float {
