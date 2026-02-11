@@ -204,46 +204,143 @@ canvas {
 }
 
 /* ============================================
-   NAV LINK — Desktop header links
-   Animated underline glow that sweeps in
+   NAV LINK — Premium header links
+   Shimmer text effect on hover, glowing underline
    ============================================ */
 .nav-link {
   position: relative;
-  padding-bottom: 4px;
-  transition: color 0.3s ease;
+  padding: 8px 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+  border-radius: 8px;
 }
 
-.nav-link::after {
-  content: '';
+/* Shimmer text effect */
+.nav-link::before {
+  content: attr(data-text);
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  border-radius: 2px;
-  transition: width 0.35s cubic-bezier(.4,0,.2,1), left 0.35s cubic-bezier(.4,0,.2,1);
-  box-shadow: none;
+  color: transparent;
+  background: linear-gradient(135deg, var(--primary), var(--accent), var(--primary));
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-text 3s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .nav-link:hover {
+  background: rgba(8, 145, 178, 0.08);
   color: var(--primary);
 }
 
-.nav-link:hover::after {
-  width: 100%;
-  left: 0;
-  box-shadow: 0 0 12px var(--primary-glow), 0 0 25px var(--accent-glow);
+.nav-link:hover::before {
+  opacity: 1;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--primary-glow);
 }
 
 .nav-link.active {
-  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  color: #fff;
 }
 
+.nav-link.active::before {
+  opacity: 0;
+}
+
+/* Active underline glow */
 .nav-link.active::after {
-  width: 100%;
+  content: '';
+  position: absolute;
+  bottom: 0;
   left: 0;
-  box-shadow: 0 0 8px var(--primary-glow);
+  right: 0;
+  height: 3px;
+  border-radius: 0 0 12px 12px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  box-shadow: 0 0 15px var(--primary-glow), 0 0 30px var(--accent-glow);
+  animation: pulse-underline 2s ease-in-out infinite;
+}
+
+/* ============================================
+   NAVBAR BRANDING — Enhanced logo section
+   ============================================ */
+.nav-brand {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.nav-brand::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.nav-brand:hover {
+  transform: scale(1.02);
+}
+
+.nav-brand:hover::before {
+  opacity: 0.4;
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes shimmer-text {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+@keyframes pulse-underline {
+  0%, 100% { transform: scaleX(1); opacity: 1; }
+  50% { transform: scaleX(0.98); opacity: 0.7; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px var(--primary-glow), 0 0 20px transparent; }
+  50% { box-shadow: 0 0 16px var(--primary-glow), 0 0 40px var(--accent-glow); }
+}
+
+@keyframes border-glow-pulse {
+  0%, 100% { border-color: var(--primary); box-shadow: 0 0 8px var(--primary-glow); }
+  50% { border-color: var(--accent); box-shadow: 0 0 16px var(--accent-glow); }
+}
+
+@keyframes radiate {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1.2); opacity: 0; }
 }
 
 /* ============================================
@@ -429,21 +526,50 @@ canvas {
 
 /* ============================================
    THEME TOGGLE BUTTON
+   Premium gradient effect on hover
    ============================================ */
 .theme-toggle {
+  position: relative;
+  overflow: hidden;
   transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  z-index: 10;
 }
 
 .theme-toggle:hover {
-  transform: rotate(20deg) scale(1.15);
+  transform: scale(1.05);
+  background: rgba(8, 145, 178, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: rgba(34, 211, 238, 0.1);
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at center, var(--primary-glow), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.theme-toggle:hover::before {
+  opacity: 0.3;
+}
+
+[data-theme="dark"] .theme-toggle:hover::before {
+  background: radial-gradient(circle at center, var(--accent-glow), transparent 70%);
+  opacity: 0.4;
+}
+
+.theme-toggle svg {
+  transition: transform 0.5s cubic-bezier(.68,-0.55,.27,1.55), filter 0.3s ease;
 }
 
 .theme-toggle:hover svg {
-  filter: drop-shadow(0 0 8px var(--accent-glow));
-}
-
-[data-theme="dark"] .theme-toggle:hover svg {
-  filter: drop-shadow(0 0 12px var(--accent-glow)) drop-shadow(0 0 25px var(--primary-glow));
+  transform: rotate(15deg);
+  filter: drop-shadow(0 0 6px var(--primary-glow)) drop-shadow(0 0 12px var(--accent-glow));
 }
 
 /* ============================================
