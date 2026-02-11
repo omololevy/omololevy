@@ -2,24 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Default light theme */
+/* ============================================
+   THEME VARIABLES
+   ============================================ */
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --background-end: #f5f5f5;
+  --primary: #0891b2;
+  --accent: #9333ea;
+  --primary-glow: rgba(8, 145, 178, 0.35);
+  --accent-glow: rgba(147, 51, 234, 0.3);
+  --shimmer-from: rgba(8, 145, 178, 0.0);
+  --shimmer-via: rgba(8, 145, 178, 0.15);
+  --shimmer-to: rgba(147, 51, 234, 0.0);
 }
 
-/* Dark theme */
 [data-theme="dark"] {
-  --background: #0a0a0a;
+  --background: #050a10;
   --foreground: #ededed;
-  --background-end: #1a1a1a;
+  --background-end: #0d1520;
+  --primary: #22d3ee;
+  --accent: #c084fc;
+  --primary-glow: rgba(34, 211, 238, 0.5);
+  --accent-glow: rgba(192, 132, 252, 0.45);
+  --shimmer-from: rgba(34, 211, 238, 0.0);
+  --shimmer-via: rgba(34, 211, 238, 0.25);
+  --shimmer-to: rgba(192, 132, 252, 0.0);
 }
 
-/* Apply system preference if no theme is set */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --background: #0a0a0a;
+    --background: #050a10;
     --foreground: #ededed;
   }
 }
@@ -30,13 +44,44 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px var(--primary-glow), 0 0 20px transparent; }
+  50% { box-shadow: 0 0 16px var(--primary-glow), 0 0 40px var(--accent-glow); }
+}
+
+@keyframes radiant-ring {
+  0% { box-shadow: 0 0 0 0 var(--primary-glow); }
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes border-glow-pulse {
+  0%, 100% { border-color: var(--primary); box-shadow: 0 0 8px var(--primary-glow); }
+  50% { border-color: var(--accent); box-shadow: 0 0 16px var(--accent-glow); }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
-/* Additional styles for homepage */
+/* ============================================
+   HOMEPAGE GRADIENT BACKGROUND
+   ============================================ */
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--background), var(--background-end));
   position: relative;
@@ -44,7 +89,9 @@ body {
   backdrop-filter: blur(4px);
 }
 
-/* Animation styles */
+/* ============================================
+   CANVAS ANIMATION
+   ============================================ */
 canvas {
   opacity: 0.8;
   transition: opacity 0.3s ease;
@@ -52,6 +99,418 @@ canvas {
 }
 
 [data-theme="dark"] canvas {
-  opacity: 0.4;
+  opacity: 0.5;
   mix-blend-mode: screen;
+}
+
+/* ============================================
+   BRAND GRADIENT BUTTON — THE STAR ELEMENT
+   Radiant shimmer sweep on hover, glow pulse
+   ============================================ */
+.btn-brand {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1),
+              box-shadow 0.3s cubic-bezier(.4,0,.2,1),
+              filter 0.3s ease;
+}
+
+/* Shimmer sweep overlay */
+.btn-brand::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(255,255,255,0.2) 40%,
+    rgba(255,255,255,0.35) 50%,
+    rgba(255,255,255,0.2) 60%,
+    transparent 80%
+  );
+  background-size: 200% 100%;
+  background-position: -200% center;
+  transition: none;
+  pointer-events: none;
+}
+
+.btn-brand:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 20px var(--primary-glow),
+    0 0 50px var(--accent-glow),
+    0 4px 20px rgba(0,0,0,0.15);
+  filter: brightness(1.15);
+}
+
+.btn-brand:hover::after {
+  animation: shimmer 0.8s ease-in-out;
+}
+
+.btn-brand:active {
+  transform: translateY(0) scale(0.98);
+}
+
+[data-theme="dark"] .btn-brand {
+  box-shadow: 0 0 12px var(--primary-glow), 0 0 30px rgba(192, 132, 252, 0.1);
+}
+
+[data-theme="dark"] .btn-brand:hover {
+  box-shadow:
+    0 0 25px var(--primary-glow),
+    0 0 60px var(--accent-glow),
+    0 0 100px rgba(34, 211, 238, 0.15);
+}
+
+/* ============================================
+   OUTLINE / GHOST BUTTON — Radiant border hover
+   ============================================ */
+.btn-outline {
+  position: relative;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: -1;
+}
+
+.btn-outline:hover {
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 18px var(--primary-glow),
+    0 0 40px var(--accent-glow);
+}
+
+.btn-outline:hover::before {
+  opacity: 1;
+}
+
+.btn-outline:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ============================================
+   NAV LINK — Desktop header links
+   Animated underline glow that sweeps in
+   ============================================ */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 2px;
+  transition: width 0.35s cubic-bezier(.4,0,.2,1), left 0.35s cubic-bezier(.4,0,.2,1);
+  box-shadow: none;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  box-shadow: 0 0 12px var(--primary-glow), 0 0 25px var(--accent-glow);
+}
+
+.nav-link.active {
+  color: var(--primary);
+}
+
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+
+/* ============================================
+   MOBILE BOTTOM NAV ITEM
+   Radiant hover + glow active state
+   ============================================ */
+.mobile-nav-item {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-nav-item:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.mobile-nav-item:hover svg {
+  filter: drop-shadow(0 0 6px var(--primary-glow));
+}
+
+.mobile-nav-item.active {
+  color: var(--primary);
+}
+
+.mobile-nav-item.active svg {
+  filter: drop-shadow(0 0 10px var(--primary-glow)) drop-shadow(0 0 20px var(--accent-glow));
+}
+
+[data-theme="dark"] .mobile-nav-item.active svg {
+  filter: drop-shadow(0 0 10px var(--primary-glow)) drop-shadow(0 0 30px var(--accent-glow));
+}
+
+/* ============================================
+   SKILL BADGE — Radiant hover glow
+   ============================================ */
+.skill-badge {
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1),
+              box-shadow 0.3s cubic-bezier(.4,0,.2,1),
+              border-color 0.3s ease;
+  border: 1.5px solid transparent;
+  cursor: default;
+}
+
+.skill-badge:hover {
+  transform: scale(1.1) translateY(-3px);
+  border-color: var(--primary);
+  box-shadow:
+    0 0 15px var(--primary-glow),
+    0 0 35px var(--accent-glow),
+    0 8px 25px rgba(0,0,0,0.08);
+}
+
+.skill-badge:hover img {
+  filter: drop-shadow(0 0 6px var(--primary-glow));
+}
+
+[data-theme="dark"] .skill-badge {
+  background: rgba(34, 211, 238, 0.06);
+  border: 1.5px solid rgba(34, 211, 238, 0.15);
+  box-shadow: 0 0 6px rgba(34, 211, 238, 0.06);
+  color: var(--foreground);
+}
+
+[data-theme="dark"] .skill-badge:hover {
+  background: rgba(34, 211, 238, 0.12);
+  border-color: var(--primary);
+  box-shadow:
+    0 0 20px var(--primary-glow),
+    0 0 50px var(--accent-glow),
+    0 0 80px rgba(34, 211, 238, 0.1);
+}
+
+[data-theme="dark"] .skill-badge img {
+  filter: drop-shadow(0 0 3px var(--primary-glow));
+}
+
+[data-theme="dark"] .skill-badge:hover img {
+  filter: drop-shadow(0 0 8px var(--primary-glow));
+}
+
+/* ============================================
+   PROFILE PICTURE — Animated border glow
+   ============================================ */
+.profile-ring {
+  border: 2.5px solid var(--primary);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+}
+
+.profile-ring:hover {
+  transform: scale(1.08);
+}
+
+[data-theme="dark"] .profile-ring {
+  animation: border-glow-pulse 3s ease-in-out infinite;
+}
+
+/* ============================================
+   GLOW UTILITIES
+   ============================================ */
+[data-theme="dark"] .glow-icon {
+  filter: drop-shadow(0 0 6px var(--primary-glow));
+}
+
+[data-theme="dark"] .glow-heading {
+  text-shadow: 0 0 25px var(--primary-glow), 0 0 50px rgba(192, 132, 252, 0.1);
+}
+
+/* ============================================
+   PROJECT TAG — Glow in dark mode
+   ============================================ */
+.tag-pill {
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.tag-pill:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary-glow);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .tag-pill {
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.15);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .tag-pill:hover {
+  box-shadow: 0 0 15px var(--primary-glow), 0 0 30px var(--accent-glow);
+}
+
+/* ============================================
+   FILTER TAG BUTTON
+   ============================================ */
+.filter-tag {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  border: 1.5px solid transparent;
+}
+
+.filter-tag:hover {
+  transform: translateY(-1px);
+  border-color: var(--primary);
+  box-shadow: 0 0 12px var(--primary-glow);
+  color: var(--primary);
+  background: rgba(8, 145, 178, 0.08);
+}
+
+[data-theme="dark"] .filter-tag:hover {
+  background: rgba(34, 211, 238, 0.1);
+  box-shadow: 0 0 18px var(--primary-glow), 0 0 35px var(--accent-glow);
+}
+
+.filter-tag.selected {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.filter-tag.selected:hover {
+  box-shadow:
+    0 0 20px var(--primary-glow),
+    0 0 45px var(--accent-glow);
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+/* ============================================
+   PROJECT CARD — Radiant border on hover
+   ============================================ */
+[data-theme="dark"] .project-card {
+  border-color: rgba(34, 211, 238, 0.08);
+}
+
+[data-theme="dark"] .project-card:hover {
+  border-color: rgba(34, 211, 238, 0.25);
+  box-shadow:
+    0 0 25px rgba(34, 211, 238, 0.08),
+    0 0 50px rgba(192, 132, 252, 0.05),
+    0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+.theme-toggle {
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.15);
+}
+
+.theme-toggle:hover svg {
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+[data-theme="dark"] .theme-toggle:hover svg {
+  filter: drop-shadow(0 0 12px var(--accent-glow)) drop-shadow(0 0 25px var(--primary-glow));
+}
+
+/* ============================================
+   FORM INPUT FOCUS GLOW
+   ============================================ */
+.input-glow {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-glow:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.15);
+  outline: none;
+}
+
+[data-theme="dark"] .input-glow:focus {
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15), 0 0 15px rgba(34, 211, 238, 0.08);
+}
+
+/* ============================================
+   CONTACT INFO LINK HOVER
+   ============================================ */
+.contact-link {
+  transition: all 0.25s ease;
+}
+
+.contact-link:hover {
+  color: var(--primary);
+}
+
+.contact-link:hover svg {
+  filter: drop-shadow(0 0 6px var(--primary-glow));
+  transform: scale(1.1);
+}
+
+.contact-link svg {
+  transition: all 0.25s ease;
+}
+
+/* ============================================
+   ABOUT PAGE SKILL CARDS
+   ============================================ */
+.about-skill-card {
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.about-skill-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+  transform: translateY(-2px);
+  background: rgba(8, 145, 178, 0.03);
+}
+
+[data-theme="dark"] .about-skill-card:hover {
+  background: rgba(34, 211, 238, 0.05);
+  box-shadow: 0 0 20px var(--primary-glow), 0 0 40px var(--accent-glow);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer-brand {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

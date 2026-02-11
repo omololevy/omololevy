@@ -7,27 +7,49 @@ import AnimatedBackground from "../../components/AnimatedBackground";
 export default function Projects() {
   const projects = useMemo(() => [
     {
+      title: "Kiungor",
+      description:
+        "AI-powered immigration platform that helps newcomers navigate migration processes seamlessly — from visa applications to job listings and real-time language translation.",
+      imageUrl: "/images/projects/kiungor/kiungor.png",
+      projectUrl: "https://kiungor.com",
+      tags: ["Next.js", "TypeScript", "Python", "Django", "PostgreSQL", "Azure", "AI"],
+    },
+    {
+      title: "CIRIS",
+      description:
+        "Document validation infrastructure that reduces processing errors by 40-60% before submission — catching inconsistencies and missing documentation through AI-driven file analysis.",
+      imageUrl: "/images/projects/ciris/ciris.png",
+      projectUrl: "https://ciris.vercel.app",
+      tags: ["Next.js", "FastAPI", "Python", "Azure", "AI", "Vercel"],
+    },
+    {
+      title: "GatePass",
+      description:
+        "Comprehensive exam preparation system for students with analytics dashboards, question banks by category, and multiple test session formats including MCQ, SATA, and NGN.",
+      imageUrl: "/images/projects/gatepass/gatepass.png",
+      projectUrl: "https://gatepass.vercel.app",
+      tags: ["Next.js", "Prisma", "PostgreSQL", "Vercel"],
+    },
+    {
+      title: "Utawala Church Management",
+      description:
+        "Full-featured church management system handling member check-in, attendance tracking, budgeting, events management, and demographic accountability groups.",
+      imageUrl: "/images/projects/church_lms/church_lms.png",
+      projectUrl: "https://utawala.onrender.com",
+      tags: ["Python", "Django", "Render"],
+    },
+    {
       title: "E-commerce Platform",
       description:
-        "A full-stack e-commerce solution with real-time inventory management.",
+        "A full-stack e-commerce solution with real-time inventory management, secure checkout, and an admin dashboard for product and order tracking.",
       imageUrl: "/images/project1.jpg",
       projectUrl: "https://example.com/project1",
       tags: ["React", "Node.js", "MongoDB", "Docker"],
     },
-    {
-      title: "Church Management System",
-      description:
-        "Comprehensive church management system with member tracking and event management.",
-      imageUrl: "/images/project2.png",
-      projectUrl: "https://utawala.onrender.com",
-      tags: ["Python", "Django", "PostgreSQL", "Docker"],
-    },
-    // Add more projects with relevant tags
   ], []);
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
-  // Extract unique tags from all projects
   const allTags = useMemo(() => {
     const tags = new Set<string>();
     projects.forEach((project) => {
@@ -36,7 +58,6 @@ export default function Projects() {
     return Array.from(tags).sort();
   }, [projects]);
 
-  // Filter projects based on selected tags
   const filteredProjects = useMemo(() => {
     if (selectedTags.length === 0) return projects;
     return projects.filter((project) =>
@@ -44,7 +65,6 @@ export default function Projects() {
     );
   }, [projects, selectedTags]);
 
-  // Handle tag selection
   const handleTagSelect = (tag: string) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
@@ -56,7 +76,14 @@ export default function Projects() {
       <AnimatedBackground />
       <div className="min-h-screen p-8 sm:p-20 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">Projects</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 glow-heading leading-tight">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Projects
+            </span>
+          </h1>
+          <p className="text-foreground/60 mb-10 text-lg max-w-2xl">
+            A selection of products I&apos;ve built — from AI-powered platforms to full-stack web applications.
+          </p>
 
           <ProjectFilter
             tags={allTags}
