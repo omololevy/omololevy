@@ -17,10 +17,10 @@ export default function ProjectFilter({
           <button
             key={tag}
             onClick={() => onTagSelect(tag)}
-            className={`px-3 py-1.5 rounded-full text-sm transition-colors ${
+            className={`filter-tag px-4 py-1.5 rounded-full text-sm font-medium ${
               selectedTags.includes(tag)
-                ? "bg-foreground text-background"
-                : "bg-foreground/10 hover:bg-foreground/20"
+                ? "selected"
+                : "bg-foreground/10"
             }`}
           >
             {tag}

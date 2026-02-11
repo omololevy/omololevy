@@ -14,6 +14,18 @@ interface Particle {
   amplitude: number;
 }
 
+interface TechSymbol {
+  x: number;
+  y: number;
+  dx: number;
+  dy: number;
+  text: string;
+  color: string;
+  size: number;
+  glowPhase: number;
+  glowSpeed: number;
+}
+
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -25,22 +37,29 @@ export default function AnimatedBackground() {
     if (!ctx) return;
 
     let particles: Particle[] = [];
+    let techSymbols: TechSymbol[] = [];
     let mouseX = 0;
     let mouseY = 0;
     let animationFrameId: number;
+    let isDark = document.documentElement.getAttribute('data-theme') === 'dark';
 
-    const colors = [
-      '#FF6B6B', // Coral
-      '#4ECDC4', // Turquoise
-      '#45B7D1', // Sky Blue
-      '#96CEB4', // Mint
-      '#FFEEAD', // Cream
-      '#D4A5A5', // Dusty Rose
-      '#9B59B6', // Purple
-      '#3498DB', // Blue
-      '#E74C3C', // Red
-      '#2ECC71', // Green
+    const lightColors = [
+      '#0891b2', // cyan-600
+      '#06b6d4', // cyan-500
+      '#22d3ee', // cyan-400
+      '#9333ea', // purple-600
+      '#a855f7', // purple-500
+      '#c084fc', // purple-400
     ];
+
+    const darkColors = [
+      '#22d3ee', // cyan-400
+      '#67e8f9', // cyan-300
+      '#c084fc', // purple-400
+      '#d8b4fe', // purple-300
+    ];
+
+    const techTexts = ['</>', '{ }', '0', '1', '#', '=>', '()', '&&', '||', '//', '[]', '::'];
 
     const resizeCanvas = () => {
       const pixelRatio = window.devicePixelRatio || 1;
@@ -53,8 +72,9 @@ export default function AnimatedBackground() {
 
     const createParticles = () => {
       particles = [];
+      const colors = isDark ? darkColors : lightColors;
       const numberOfParticles = Math.floor((canvas.width * canvas.height) / 25000);
-      
+
       for (let i = 0; i < numberOfParticles; i++) {
         particles.push({
           x: Math.random() * window.innerWidth,
@@ -66,6 +86,25 @@ export default function AnimatedBackground() {
           angle: Math.random() * Math.PI * 2,
           angleSpeed: (Math.random() - 0.5) * 0.02,
           amplitude: Math.random() * 50 + 20
+        });
+      }
+    };
+
+    const createTechSymbols = () => {
+      techSymbols = [];
+      const count = Math.floor((window.innerWidth * window.innerHeight) / 40000);
+
+      for (let i = 0; i < count; i++) {
+        techSymbols.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          dx: (Math.random() - 0.5) * 0.4,
+          dy: (Math.random() - 0.5) * 0.4,
+          text: techTexts[Math.floor(Math.random() * techTexts.length)],
+          color: darkColors[Math.floor(Math.random() * darkColors.length)],
+          size: Math.random() * 10 + 12,
+          glowPhase: Math.random() * Math.PI * 2,
+          glowSpeed: Math.random() * 0.02 + 0.01,
         });
       }
     };
@@ -89,14 +128,13 @@ export default function AnimatedBackground() {
       ctx.stroke();
     };
 
-    const drawParticles = () => {
+    const drawLightMode = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       particles.forEach((particle) => {
-        // Update particle position with sinusoidal movement
         particle.angle += particle.angleSpeed;
         const waveFactor = Math.sin(particle.angle) * particle.amplitude;
-        
+
         ctx.beginPath();
         ctx.arc(
           particle.x + waveFactor * 0.2,
@@ -108,28 +146,24 @@ export default function AnimatedBackground() {
         ctx.fillStyle = `${particle.color}88`;
         ctx.fill();
 
-        // Update position
         particle.x += particle.dx;
         particle.y += particle.dy;
 
-        // Mouse interaction
         const dx = mouseX - particle.x;
         const dy = mouseY - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        
+
         if (distance < 150) {
           particle.dx += dx * 0.001;
           particle.dy += dy * 0.001;
         }
 
-        // Wrap around screen
         if (particle.x < 0) particle.x = window.innerWidth;
         if (particle.x > window.innerWidth) particle.x = 0;
         if (particle.y < 0) particle.y = window.innerHeight;
         if (particle.y > window.innerHeight) particle.y = 0;
       });
 
-      // Draw curved connections
       particles.forEach((particle1, i) => {
         particles.slice(i + 1).forEach(particle2 => {
           const dx = particle1.x - particle2.x;
@@ -149,8 +183,88 @@ export default function AnimatedBackground() {
           }
         });
       });
+    };
 
-      animationFrameId = requestAnimationFrame(drawParticles);
+    const drawDarkMode = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      techSymbols.forEach((symbol) => {
+        symbol.glowPhase += symbol.glowSpeed;
+        const glowIntensity = 0.4 + Math.sin(symbol.glowPhase) * 0.3;
+
+        ctx.save();
+        ctx.font = `${symbol.size}px monospace`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        // Glow effect
+        ctx.shadowColor = symbol.color;
+        ctx.shadowBlur = 15 * glowIntensity;
+        ctx.fillStyle = `${symbol.color}${Math.floor(glowIntensity * 200).toString(16).padStart(2, '0')}`;
+        ctx.fillText(symbol.text, symbol.x, symbol.y);
+
+        ctx.restore();
+
+        // Update position
+        symbol.x += symbol.dx;
+        symbol.y += symbol.dy;
+
+        // Mouse interaction
+        const dx = mouseX - symbol.x;
+        const dy = mouseY - symbol.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 200) {
+          symbol.dx += dx * 0.0005;
+          symbol.dy += dy * 0.0005;
+        }
+
+        // Dampen velocity
+        symbol.dx *= 0.999;
+        symbol.dy *= 0.999;
+
+        // Wrap around
+        if (symbol.x < -20) symbol.x = window.innerWidth + 20;
+        if (symbol.x > window.innerWidth + 20) symbol.x = -20;
+        if (symbol.y < -20) symbol.y = window.innerHeight + 20;
+        if (symbol.y > window.innerHeight + 20) symbol.y = -20;
+      });
+
+      // Draw circuit-like connections
+      techSymbols.forEach((sym1, i) => {
+        techSymbols.slice(i + 1).forEach(sym2 => {
+          const dx = sym1.x - sym2.x;
+          const dy = sym1.y - sym2.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 180) {
+            const alpha = (1 - distance / 180) * 0.3;
+            ctx.save();
+            ctx.beginPath();
+            // Circuit-style: horizontal then vertical line
+            const midX = sym1.x + (sym2.x - sym1.x) * 0.5;
+            ctx.moveTo(sym1.x, sym1.y);
+            ctx.lineTo(midX, sym1.y);
+            ctx.lineTo(midX, sym2.y);
+            ctx.lineTo(sym2.x, sym2.y);
+            ctx.strokeStyle = `${sym1.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
+            ctx.lineWidth = 1;
+            ctx.shadowColor = sym1.color;
+            ctx.shadowBlur = 5;
+            ctx.stroke();
+            ctx.restore();
+          }
+        });
+      });
+    };
+
+    const animate = () => {
+      if (isDark) {
+        drawDarkMode();
+      } else {
+        drawLightMode();
+      }
+      animationFrameId = requestAnimationFrame(animate);
     };
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -158,19 +272,40 @@ export default function AnimatedBackground() {
       mouseY = e.clientY;
     };
 
-    window.addEventListener('resize', () => {
+    const handleThemeChange = () => {
+      isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        createTechSymbols();
+      } else {
+        createParticles();
+      }
+    };
+
+    const handleResize = () => {
       resizeCanvas();
-      createParticles();
-    });
+      if (isDark) {
+        createTechSymbols();
+      } else {
+        createParticles();
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
     window.addEventListener('mousemove', handleMouseMove);
-    
+    window.addEventListener('theme-change', handleThemeChange);
+
     resizeCanvas();
-    createParticles();
-    drawParticles();
+    if (isDark) {
+      createTechSymbols();
+    } else {
+      createParticles();
+    }
+    animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('theme-change', handleThemeChange);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
