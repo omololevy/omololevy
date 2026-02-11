@@ -39,6 +39,14 @@ export default function Projects() {
       tags: ["Python", "Django", "Render"],
     },
     {
+      title: "Cotechie",
+      description:
+        "Company profile portfolio showcasing completed projects, tech stack expertise, and service offerings — built for speed and modern aesthetics.",
+      imageUrl: "/images/projects/cotechie/cotechie.png",
+      projectUrl: "https://cotechie.vercel.app",
+      tags: ["Next.js", "TypeScript", "Vercel"],
+    },
+    {
       title: "E-commerce Platform",
       description:
         "A full-stack e-commerce solution with real-time inventory management, secure checkout, and an admin dashboard for product and order tracking.",
