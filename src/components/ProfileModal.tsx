@@ -49,6 +49,13 @@ export default function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
     setTimeout(onClose, 250);
   }, [onClose]);
 
+  // Auto-close after 10 seconds
+  useEffect(() => {
+    if (!isOpen) return;
+    const timer = setTimeout(handleClose, 10000);
+    return () => clearTimeout(timer);
+  }, [isOpen, handleClose]);
+
   // Escape key
   useEffect(() => {
     if (!isOpen) return;
