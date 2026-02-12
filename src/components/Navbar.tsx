@@ -4,10 +4,12 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import ProfileModal from "./ProfileModal";
 
 export default function Navbar() {
   const [theme, setTheme] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -48,8 +50,12 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* ── Brand / Logo ── */}
-        <Link href="/" className="nav-brand flex items-center gap-3.5 group">
-          <div className="relative">
+        <div className="nav-brand flex items-center gap-3.5 group">
+          <button
+            onClick={() => setModalOpen(true)}
+            className="relative cursor-pointer bg-transparent border-none p-0"
+            aria-label="View profile"
+          >
             {/* Soft ambient glow behind photo */}
             <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-primary/20 to-accent/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <Image
@@ -59,16 +65,16 @@ export default function Navbar() {
               height={48}
               className="nav-profile-ring rounded-full w-12 h-12 object-cover shadow-lg relative z-10"
             />
-          </div>
-          <div className="flex flex-col leading-none">
+          </button>
+          <Link href="/" className="flex flex-col leading-none">
             <span className="nav-brand-name text-2xl sm:text-[1.7rem]">
               Levy<span className="text-primary">.</span>Omolo
             </span>
             <span className="text-[10px] font-medium text-foreground/40 tracking-widest uppercase mt-0.5 hidden sm:block">
               Software Engineer
             </span>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
         {/* ── Desktop Navigation ── */}
         <div className="hidden md:flex items-center gap-3">
@@ -164,6 +170,8 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      <ProfileModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </nav>
   );
 }
