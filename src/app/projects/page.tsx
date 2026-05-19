@@ -19,7 +19,7 @@ export default function Projects() {
       description:
         "Document validation infrastructure that reduces processing errors by 40-60% before submission — catching inconsistencies and missing documentation through AI-driven file analysis.",
       imageUrl: "/images/projects/ciris/ciris.png",
-      projectUrl: "https://ciris.vercel.app",
+      projectUrl: "https://kiungor.com",
       tags: ["Next.js", "FastAPI", "Python", "Azure", "AI", "Vercel"],
     },
     {
@@ -27,7 +27,7 @@ export default function Projects() {
       description:
         "Comprehensive exam preparation system for students with analytics dashboards, question banks by category, and multiple test session formats including MCQ, SATA, and NGN.",
       imageUrl: "/images/projects/gatepass/gatepass.png",
-      projectUrl: "https://gatepass.vercel.app",
+      projectUrl: "https://gatepass-qbank.vercel.app",
       tags: ["Next.js", "Prisma", "PostgreSQL", "Vercel"],
     },
     {
@@ -47,11 +47,11 @@ export default function Projects() {
       tags: ["Next.js", "TypeScript", "Vercel"],
     },
     {
-      title: "E-commerce Platform",
+      title: "MallMatt",
       description:
-        "A full-stack e-commerce solution with real-time inventory management, secure checkout, and an admin dashboard for product and order tracking.",
-      imageUrl: "/images/project1.jpg",
-      projectUrl: "https://example.com/project1",
+        "Kenya's online shopping mall connecting consumers with verified local retailers across all 47 counties — featuring M-Pesa secure checkout, multi-category listings spanning electronics to fashion, and buyer protection built for the Kenyan market.",
+      imageUrl: "/images/projects/mallmatt/mallmatt.png",
+      projectUrl: "https://mallmatt.com",
       tags: ["React", "Node.js", "MongoDB", "Docker"],
     },
   ], []);
